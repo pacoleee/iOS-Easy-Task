@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PF1-TI-sQ3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Ce7-b2-K9j">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="PF1-TI-sQ3" customClass="HomeViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HLE-xe-B6B"/>
+                        <viewControllerLayoutGuide type="bottom" id="a85-HO-Wan"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WIJ-3y-xJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcg-ol-1FA">
+                                <rect key="frame" x="28" y="284" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.85882352939999995" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DVu-5U-Rxb"/>
+                                    <constraint firstAttribute="width" constant="320" id="Tvj-PG-zsK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterAction:" destination="PF1-TI-sQ3" eventType="touchUpInside" id="SC9-zR-Glb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAI-OO-362">
+                                <rect key="frame" x="134" y="220" width="106" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.66333925719999998" blue="0.88005715610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lcg-ol-1FA" firstAttribute="top" secondItem="oAI-OO-362" secondAttribute="bottom" constant="32" id="FA2-Xz-8q9"/>
+                            <constraint firstItem="oAI-OO-362" firstAttribute="top" secondItem="HLE-xe-B6B" secondAttribute="bottom" constant="200" id="ctM-He-VmJ"/>
+                            <constraint firstItem="oAI-OO-362" firstAttribute="centerX" secondItem="WIJ-3y-xJ7" secondAttribute="centerX" id="ilP-wH-52v"/>
+                            <constraint firstItem="Lcg-ol-1FA" firstAttribute="centerX" secondItem="WIJ-3y-xJ7" secondAttribute="centerX" id="mJt-5b-bPd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gfM-yp-WOb"/>
+                    <connections>
+                        <outlet property="enterButton" destination="Lcg-ol-1FA" id="1bY-Rc-9c4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UlI-iK-1cL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="82.3088455772114"/>
+        </scene>
+    </scenes>
+</document>
